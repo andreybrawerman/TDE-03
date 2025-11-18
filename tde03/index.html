@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDE 03</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .card { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+        button { padding: 10px 20px; cursor: pointer; }
+        input { padding: 10px; width: 70%; }
+        #error-msg { color: red; display: none; }
+        .success { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Gerenciador de Posts (JSONPlaceholder)</h1>
+
+    <p id="error-msg"></p>
+
+    <div style="background: #f4f4f4; padding: 15px; margin-bottom: 20px;">
+        <h3>Criar Novo Post</h3>
+        <input type="text" id="post-title" placeholder="Digite o título do post...">
+        <button onclick="criarPost()">Enviar</button>
+        <p id="post-result"></p>
+    </div>
+
+    <h3>Lista de Posts</h3>
+    <button onclick="buscarPosts()">Carregar Posts</button>
+    <div id="posts-container" style="margin-top: 20px;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
